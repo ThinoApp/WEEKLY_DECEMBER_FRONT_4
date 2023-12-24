@@ -1,0 +1,40 @@
+.App {
+    @apply w-screen overflow-x-hidden bg-darkbg flex flex-col gap-[100px];
+    scroll-timeline-name: progressTimeLine;
+}
+
+.App .progress1 {
+    @apply h-screen fixed z-20 top-0 w-[1.5px] bg-primary;
+    animation-name: slide;
+    transform-origin: top;
+    animation-duration: 1s;
+    /* animation-direction: alternate; */
+    animation-timeline: scroll(root);
+}
+
+.App .progress2 {
+    @apply w-screen fixed z-20 top-0 h-[1.5px] bg-primary;
+    animation-name: slideX;
+    transform-origin: left;
+    animation-duration: 1s;
+    /* animation-direction: alternate; */
+    animation-timeline: scroll(root);
+}
+
+@keyframes slide {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+        @apply bg-primary;
+    }
+}
+@keyframes slideX {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}

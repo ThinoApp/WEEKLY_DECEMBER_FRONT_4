@@ -1,0 +1,78 @@
+@use '/src/assets/global';
+
+.Header {
+    @include global.paddingInline();
+
+    @apply w-full flex items-center justify-between flex-wrap sm:justify-center lg:justify-between  my-4 sm:gap-4;
+    img {
+        @apply w-[150px] object-cover;
+        order: 1;
+    }
+    .btn-login {
+        @apply order-2 sm:order-3 hidden xsm:flex border-[1px] border-white text-white px-12 py-2;
+        font-family: Graphik;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: left;
+        box-shadow: 0px 4px 31px 0px #00000026;
+        transition: 0.5s;
+        &:hover {
+            @apply bg-white text-black translate-x-4;
+        }
+    }
+
+    ul.MenuDesktop {
+        @apply order-3 hidden sm:flex items-center gap-16;
+        li {
+            @apply text-white cursor-pointer;
+            font-family: Graphik;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0.20000000298023224px;
+            text-align: center;
+        }
+    }
+    .MenuMobile {
+        order: 3;
+        @apply flex justify-end sm:hidden z-10;
+
+        .icon {
+            @apply text-white text-5xl;
+        }
+        ul {
+            @apply w-2/3 h-screen  flex-col  fixed right-0 top-0;
+
+            background: rgba($color: #000000, $alpha: 0.8);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            -moz-backdrop-filter: blur(8px);
+            &.show {
+                @apply flex px-8 py-24 gap-8;
+                li {
+                    &:nth-child(1) {
+                        @apply absolute right-8 top-5;
+                    }
+                    @apply text-white text-xl;
+                    font-family: Graphik;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0.20000000298023224px;
+                    text-align: center;
+                }
+                .btn-login {
+                    @apply w-1/2 text-center mx-auto flex items-center justify-center;
+                    transition: 0.5s;
+                    &:hover {
+                        @apply bg-white text-black translate-x-4;
+                    }
+                }
+            }
+            &.hide {
+                @apply hidden;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use '/src/assets/global';
+.Cta {
+    @include global.paddingInline();
+    .Cta-container {
+        @apply rounded-2xl w-full flex flex-col items-center gap-4 sm:bg-[#343434] sm:flex-row sm:h-80;
+        & > div {
+            @apply flex flex-col items-center gap-4 sm:p-8 sm:items-start sm:gap-8;
+            h2 {
+                @apply text-white text-[52px] sm:text-[40px] leading-[62px] sm:leading-[55px];
+                //styleName: Second Headline;
+                font-family: Graphik;
+                font-weight: 400;
+                letter-spacing: 0.20000000298023224px;
+                text-align: center;
+            }
+            button {
+                @apply border-[1px] text-white px-12 py-2;
+                @apply bg-primary border-none;
+                //styleName: Button;
+                font-family: Graphik;
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 25px;
+                letter-spacing: 0.20000000298023224px;
+                text-align: center;
+                box-shadow: 0px 4px 31px 0px #00000026;
+            }
+        }
+        picture {
+            @apply w-full h-full mt-16 sm:mt-0;
+            img {
+                @apply w-full h-full object-cover;
+            }
+        }
+    }
+}

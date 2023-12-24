@@ -1,0 +1,68 @@
+.Hero {
+    @apply w-full flex flex-col gap-12 items-center;
+    h1 {
+        @apply w-2/3 text-white text-[52px] text-[400] leading-[62px] tracking-[0.20000000298023224px];
+        @apply sm:w-[700px] lg:text-[80px] lg:text-[500] lg:leading-[88px] lg:tracking-[0.2px];
+        font-family: Graphik;
+        text-align: center;
+    }
+    p {
+        @apply w-3/4 xsm:w-[380px] sm:w-[600px] text-[20px] text-[400] leading-[30px] tracking-[0.20000000298023224px] text-center text-white;
+        //styleName: Sub Heading;
+        font-family: Graphik;
+    }
+
+    .btn-container {
+        @apply flex flex-col items-center gap-4;
+        @apply sm:flex-row;
+        button {
+            @apply border-[1px] border-white text-white px-8 py-4;
+            //styleName: Button;
+            font-family: Graphik;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 25px;
+            letter-spacing: 0.20000000298023224px;
+            text-align: center;
+            box-shadow: 0px 4px 31px 0px #00000026;
+            transition: 0.5s;
+            &:nth-child(2) {
+                &:hover {
+                    @apply bg-white text-black translate-x-4;
+                }
+            }
+            &:nth-child(1) {
+                @apply bg-primary border-none;
+                &:hover {
+                    @apply bg-white text-primary -translate-x-4;
+                }
+            }
+        }
+    }
+
+    .screen-picture {
+        @apply w-full  relative;
+        &::after {
+            content: '';
+            @apply absolute top-0 left-0 w-full h-full block;
+            // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0e0e0e 66.15%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65%, #0e0e0e 86.15%);
+        }
+        img {
+            @apply w-full object-cover;
+        }
+    }
+
+    .screen-picture-lg {
+        @apply w-full  relative;
+        &::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-full h-1/2 block;
+            // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0e0e0e 66.15%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65%, #0e0e0e 86.15%);
+        }
+        img {
+            @apply w-full object-cover;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@use '/src/assets/global';
+.Content {
+    @include global.paddingInline();
+    @apply w-full flex flex-col items-center gap-8;
+    h2 {
+        @apply text-white;
+        //styleName: Second Headline;
+        font-family: Graphik;
+        font-size: 52px;
+        font-weight: 400;
+        line-height: 62px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: left;
+    }
+    & > p {
+        @apply text-white  w-full lg:w-[60%];
+        //styleName: Sub Heading;
+        font-family: Graphik;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: center;
+    }
+
+    .Content-elements {
+        @apply w-full flex flex-col items-center gap-4 lg:flex-row lg:items-stretch;
+        .Content-item {
+            @apply bg-white rounded-xl px-[5%] flex flex-col items-center py-12 gap-4;
+            box-shadow: 0px 4px 31px 0px #00000026;
+
+            h3 {
+                //styleName: Title;
+                font-family: Graphik;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 30px;
+                letter-spacing: 0.10000000149011612px;
+                text-align: center;
+            }
+            p {
+                @apply text-lightGray w-full;
+                //styleName: Paragraphe;
+                font-family: Graphik;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0.20000000298023224px;
+                text-align: center;
+            }
+
+            button {
+                @apply border-[1px] w-1/2 mt-auto text-white px-8 py-4;
+                //styleName: Button;
+                font-family: Graphik;
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 25px;
+                letter-spacing: 0.20000000298023224px;
+                text-align: center;
+                box-shadow: 0px 4px 31px 0px #00000026;
+                @apply bg-primary border-none;
+            }
+            img {
+                @apply mt-auto object-cover w-full;
+            }
+        }
+    }
+}

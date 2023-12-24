@@ -1,0 +1,71 @@
+@use '/src/assets/global';
+.Features {
+    @include global.paddingInline();
+    @apply flex flex-col items-center  gap-8;
+    h2 {
+        //styleName: Second Headline;
+        @apply text-white;
+        font-family: Graphik;
+        font-size: 52px;
+        font-weight: 400;
+        line-height: 62px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: left;
+    }
+    p.Features-subtitle {
+        @apply text-white sm:w-2/3;
+        //styleName: Sub Heading;
+        font-family: Graphik;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: center;
+    }
+
+    .Feature-content {
+        @apply flex flex-col items-center gap-4 lg:flex-row  lg:gap-12 lg:mt-8;
+        .Feature-chart {
+            @apply relative mb-[4rem] sm:mb-[7rem] md:mb-[8rem] sm:w-3/4;
+            picture {
+                @apply w-full;
+                img {
+                    @apply object-cover;
+                }
+            }
+            .line-chart {
+                @apply w-3/4 absolute bottom-0 left-1/2 translate-y-1/3 lg:translate-y-1/4 lg:left-full -translate-x-1/2 lg:-translate-x-[85%];
+            }
+        }
+        .Feature-list {
+            @apply flex flex-col sm:flex-row sm:flex-wrap sm:justify-center  items-start w-2/3 md:w-full gap-12;
+            @apply lg:flex-col lg:w-1/3;
+            li {
+                @apply flex flex-col items-start gap-5 sm:w-[40%] lg:w-full;
+                h3 {
+                    @apply text-white flex items-center gap-2;
+                    //styleName: Title;
+                    font-family: Graphik;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 30px;
+                    letter-spacing: 0.10000000149011612px;
+                    text-align: left;
+                    .icon {
+                        @apply text-secondary text-5xl;
+                    }
+                }
+                p {
+                    @apply text-white;
+                    //styleName: Paragraphe;
+                    font-family: Graphik;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0.20000000298023224px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

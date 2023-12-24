@@ -1,0 +1,52 @@
+@use '/src/assets/global';
+.Partner {
+    @include global.paddingInline();
+    @apply w-full flex flex-col items-center gap-12;
+    h2 {
+        @apply text-white;
+        //styleName: Second Headline;
+        font-family: Graphik;
+        font-size: 52px;
+        font-weight: 400;
+        line-height: 62px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: left;
+    }
+    p {
+        @apply text-white w-2/3;
+        font-family: Graphik;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: center;
+    }
+    ul {
+        @apply flex flex-row justify-center items-center gap-10 flex-wrap w-full;
+
+        img {
+            @apply duration-300 object-cover rounded-xl;
+            // @apply xsm:w-56 xsm:h-56;
+            // @apply lg:w-48 lg:h-56;
+            box-shadow: 0px 4px 31px 0px #00000026;
+            &.expand {
+                @apply lg:flex-2;
+            }
+        }
+    }
+    button {
+        @apply border-[1px] border-white text-white px-8 py-4;
+        //styleName: Button;
+        font-family: Graphik;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 0.20000000298023224px;
+        text-align: center;
+        box-shadow: 0px 4px 31px 0px #00000026;
+        transition: 0.5s;
+        &:hover {
+            @apply bg-white text-black translate-x-4;
+        }
+    }
+}

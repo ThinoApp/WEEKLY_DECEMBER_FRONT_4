@@ -1,0 +1,41 @@
+@use '/src/assets/global';
+.Footer {
+    @include global.paddingInline();
+    @apply flex flex-col xsm:flex-row xsm:flex-wrap   gap-12 xsm:gap-0 items-start pb-28;
+    & > li {
+        @apply flex flex-col gap-8 flex-1;
+        h3 {
+            @apply text-white;
+            //styleName: Title;
+            font-family: Graphik;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 30px;
+            letter-spacing: 0.10000000149011612px;
+            text-align: left;
+        }
+        ul {
+            @apply flex flex-col gap-2;
+            li {
+                @apply text-white;
+                //styleName: Link;
+                font-family: Graphik;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0.20000000298023224px;
+                text-align: left;
+            }
+        }
+    }
+    li.Footer-socialNetwork {
+        @apply flex flex-col items-start flex-2 ml-auto;
+        & > p,
+        & > div {
+            @apply flex items-center text-white gap-4 pl-24;
+            .icon {
+                @apply text-3xl;
+            }
+        }
+    }
+}
