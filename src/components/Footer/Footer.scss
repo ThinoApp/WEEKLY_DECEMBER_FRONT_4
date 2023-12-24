@@ -32,7 +32,7 @@
         @apply flex flex-col items-start flex-2 ml-auto;
         & > p,
         & > div {
-            @apply flex items-center text-white gap-4 pl-24;
+            @apply flex items-center text-white gap-4 lg:pl-24;
             .icon {
                 @apply text-3xl;
             }

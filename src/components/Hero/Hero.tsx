@@ -29,7 +29,7 @@ const Hero = () => {
                 <button>Learn More</button>
             </div>
             <motion.div
-                className="screen-picture-lg hidden lg:block"
+                className="screen-picture-lg hidden lg:block "
                 variants={fadeInDown}
                 initial="hidden"
                 whileInView="show"
@@ -58,7 +58,6 @@ const Hero = () => {
                     />
                     <img src={`${config.image_base}/assets/images/screens.png`} alt="screens image" />
                 </picture>
-                <Spline scene="https://prod.spline.design/NSgyMJxXaLQdEyjh/scene.splinecode" />
             </motion.div>
         </motion.div>
     );
